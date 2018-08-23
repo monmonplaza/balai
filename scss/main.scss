@@ -1,5 +1,98 @@
-$primary: #444;
+@import 'reset';
+@import 'font';
+@import 'config';
+@import 'grid';
+@import 'mobile';
 
-body {
-  background: $primary;
+
+  header {
+    @include clearfix;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    #branding {
+      padding: .5rem;
+      float: left;
+      margin-left: 1rem;
+    }
+    nav {
+      float: right;
+      margin-right: 1rem;
+      line-height: 100px;
+      .toggle-menu {
+        display: none;
+      }
+      ul li { 
+        display: inline-block;
+        a {
+          text-decoration: none;
+          text-transform: uppercase;  
+          color: #fff;
+          margin-right: 20px;
+          font-size: 1.2rem;
+          letter-spacing: 1.6px;
+        }  
+        .active {
+          color: $primary-color;
+          border: 2px solid $primary-color;
+          padding: 10px;
+        }
+      }
+    }
+  } 
+  
+#banner {
+  background: url($banner-img);
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: {
+    size:cover;
+    repeat: no-repeat;
+    position: 0 center;
+  }
+  &:after {
+    content:'';
+    position: absolute;
+    left: 0;
+    right:0;
+    // background: rgba(134, 134, 134, 0.2);
+    height: 100vh;
+  }
+  .banner-wrapper {
+    z-index: 3;
+    text-align: left;
+    margin: 150px;
+    padding: 50px;
+    //background:rgba(255,255,255,.8);
+    h1 {
+      color:#fff;
+      text-transform: uppercase;
+      letter-spacing: -5px;
+      margin-top: -40px;
+      font: {
+        size: 6rem;
+        weight: 800;
+      }
+    }
+    h2 {
+      color:#fff;
+      margin-top: -10px;
+      margin-bottom: 30px;
+      word-spacing: 5px;
+      font-size: 3rem;
+      text-transform: lowercase;
+    }
+    a {
+      padding: 10px 25px;
+      color: #fff;
+      border:2px solid $primary-color;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+    }
+  }
 }
+
+  
