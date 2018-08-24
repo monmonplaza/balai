@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Balai Inn Travel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/dist/css/main.css">
 </head>
 
@@ -15,9 +16,9 @@
         <div id="branding">
             <img src="images/logo-orange.png" alt="Balai Logo">
         </div>
-
+        <div class="toggle-menu-open">menu</div>
         <nav>
-            <div class="toggle-menu">menu</div>
+            <div class="toggle-menu-close">x</div>
             <ul>
                 <li>
                     <a href="#" class="active">Home</a>
@@ -36,15 +37,16 @@
                 </li>
             </ul>
         </nav>
+
     </header>
     <!-- Header End -->
 
     <!-- Banner Start-->
     <section id="banner">
-        <div class="banner-wrapper">
+        <div class="banner-content">
             <h1>Travel &</h1>
             <h1>Lodging</h1>
-            <h2>Dagos po Kamo... Tuloy po kayo</h2>
+            <h2>We're a provider of experience, not strictly accommodation.</h2>
             <a href="#">Explore</a>
         </div>
     </section>
@@ -56,19 +58,26 @@
             <div class="wrapper">
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="#" alt="">
+                        <img src="./images/about.png" alt="" class="img-fluid ">
                     </div>
 
                     <div class="col-md-6">
                         <div class="about-content">
-                            <h1 class="section-title">About</h1>
-                            <h3>Beginnings</h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis animi maiores totam beatae harum
+                            <div class="section-title text-right">
+                                <hr>
+                                <h3>About Us</h3>
+                                <h4>Beginnings</h4>
+                            </div>
+
+                            <p class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis animi maiores totam beatae harum
                                 quis amet laboriosam adipisci nihil veniam.</p>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reiciendis qui eveniet nam
+                            <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reiciendis qui eveniet nam
                                 unde, recusandae alias voluptas sunt eius nulla delectus, quidem cum earum, dicta libero
                                 nihil inventore minus necessitatibus repellendus? Pariatur explicabo deserunt eius ab inventore
                                 sed? Quas, dolore?</p>
+                            <p class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, a odit nihil doloremque dolor
+                                sequi.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -80,37 +89,158 @@
     <section id="amenities">
         <div class="container">
             <div class="wrapper">
+                <div class="section-title text-left">
+                    <hr>
+                    <h3>Rooms</h3>
+                    <h4>Explore</h4>
+                </div>
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <img src="#" alt="">
-                            </div>
-                            <div class="col-md-6">
-                                <div class="detail-wrapper">
-                                    <h3>
-                                        <span>php
-                                            <span>1000</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, cumque?</p>
-                                    <a href="#" class="btn btn-reserve">Reserve Now</a>
-                                </div>
+                    <div class="col-md-3 mb-40">
+                        <img src="./images/room.jpg" alt="" class="img-fluid ">
+                    </div>
+                    <div class="col-md-3 mb-40">
+                        <div class="detail-wrapper">
+                            <h3>
+                                <span>php</span>1000</h3>
+                            <ul>
+                                <li>2-4 person</li>
+                                <li>Airconditioned</li>
+                                <li>Television</li>
+                                <li>Hot/Cold Shower</li>
+                            </ul>
+                            <a href="#" class="btn btn-reserve">Reserve Now</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-40">
+                        <img src="./images/room.jpg" alt="" class="img-fluid ">
+                    </div>
+                    <div class="col-md-3 mb-40">
+                        <div class="detail-wrapper">
+                            <h3>
+                                <span>php</span>1200</h3>
+                            <ul>
+                                <li>2-4 person</li>
+                                <li>Airconditioned</li>
+                                <li>Television</li>
+                                <li>Hot/Cold Shower</li>
+                            </ul>
+                            <a href="#" class="btn btn-reserve">Reserve Now</a>
+                        </div>
+                    </div>
+
+                    <div class=" col-md-3 mb-40">
+                        <img src="./images/room.jpg" alt="" class="img-fluid ">
+                    </div>
+                    <div class="col-md-3 mb-40">
+                        <div class="detail-wrapper">
+                            <h3>
+                                <span>php</span>1200</h3>
+                            <ul>
+                                <li>2-4 person</li>
+                                <li>Airconditioned</li>
+                                <li>Television</li>
+                                <li>Hot/Cold Shower</li>
+                            </ul>
+                            <a href="#" class="btn btn-reserve">Reserve Now</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-40">
+                        <img src="./images/room.jpg" alt="" class="img-fluid ">
+                    </div>
+                    <div class=" col-md-3 mb-40">
+                        <div class="detail-wrapper">
+                            <h3>
+                                <span>php</span>1200</h3>
+                            <ul>
+                                <li>2-4 person</li>
+                                <li>Airconditioned</li>
+                                <li>Television</li>
+                                <li>Hot/Cold Shower</li>
+                            </ul>
+                            <a href="#" class="btn btn-reserve">Reserve Now</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- gallery start -->
+    <section id="gallery">
+        <div class="container">
+            <div class="wrapper">
+                <div class="section-title text-right">
+                    <hr>
+                    <h3>gallery</h3>
+                    <h4>Memories</h4>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="gallery-box">
+                            <img src="./images/room.jpg" alt="" class="img-fluid">
+                            <div class="gallery-link">
+                                <h3>Gallery 1</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, quis.</p>
+                                <a href="#" class="btn">View Gallery</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <img src="#" alt="">
+                    <div class="col-md-4">
+                        <div class="gallery-box">
+                            <img src="./images/room.jpg" alt="" class="img-fluid">
+                            <div class="gallery-link">
+                                <h3>Gallery 1</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, quis.</p>
+                                <a href="#" class="btn">View Gallery</a>
                             </div>
-                            <div class="col-md-6">
-                                <div class="detail-wrapper">
-                                    <h3>
-                                        <span>php
-                                            <span>1000</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, cumque?</p>
-                                    <a href="#" class="btn btn-reserve">Reserve Now</a>
-                                </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="gallery-box">
+                            <img src="./images/room.jpg" alt="" class="img-fluid">
+                            <div class="gallery-link">
+                                <h3>Gallery 1</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, quis.</p>
+                                <a href="#" class="btn">View Gallery</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="gallery-box">
+                            <img src="./images/room.jpg" alt="" class="img-fluid">
+                            <div class="gallery-link">
+                                <h3>Gallery 1</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, quis.</p>
+                                <a href="#" class="btn">View Gallery</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="gallery-box">
+                            <img src="./images/room.jpg" alt="" class="img-fluid">
+                            <div class="gallery-link">
+                                <h3>Gallery 1</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, quis.</p>
+                                <a href="#" class="btn">View Gallery</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="gallery-box">
+                            <img src="./images/room.jpg" alt="" class="img-fluid">
+                            <div class="gallery-link">
+                                <h3>Gallery 1</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, quis.</p>
+                                <a href="#" class="btn">View Gallery</a>
                             </div>
                         </div>
                     </div>
@@ -118,9 +248,66 @@
             </div>
         </div>
     </section>
+    <!-- gallery end -->
 
 
 
+    <section id="contact">
+        <div class="container">
+            <div class="wrapper">
+                <div class="section-title text-left text-white">
+                    <hr>
+                    <h3>contact</h3>
+                    <h4>Connect</h4>
+                </div>
+
+                <div class="contact-wrapper">
+                    <div class="contact-content">
+                        <form action="">
+                            <input type="text" placeholder="Name">
+                            <input type="number" placeholder="Phone">
+                            <input type="email" placeholder="Email">
+                            <textarea name="" id="" placeholder="Message"></textarea>
+                            <button>Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="wrapper">
+                <div class="footer-content">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <h3>Balai Inn Travel Lodge</h3>
+
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

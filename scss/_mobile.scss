@@ -1,0 +1,31 @@
+@media screen and (max-width: $md-screen) {
+    .toggle-menu-open {
+        display: block!important;
+        position: relative;
+        top: 40px;
+        text-align: right;
+        margin-right: 40px;
+
+    }
+    
+    .toggle-menu-close {
+        display: block;
+        text-align: right;
+        padding: 20px;
+    }
+     
+    nav {
+        position: relative;
+        right: 100%;
+        background-color: rgba(0, 0, 0, 0.336);
+        width: 50vw;
+        height: 100vh;
+        margin-right: 0!important;
+        ul {
+            li {
+                display: block!important;
+                text-align: right;
+            }
+        }
+    }
+}  

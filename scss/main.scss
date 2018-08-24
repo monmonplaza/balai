@@ -1,5 +1,6 @@
 @import 'reset';
 @import 'font';
+@import 'mixin';
 @import 'config';
 @import 'grid';
 @import 'mobile';
@@ -10,6 +11,7 @@
     position: fixed;
     z-index: 5;
     width: 100%;
+    height: 100px ;
     #branding {
       padding: .5rem;
       float: left;
@@ -19,9 +21,6 @@
       float: right;
       margin-right: 1rem;
       line-height: 100px;
-      .toggle-menu {
-        display: none;
-      }
       ul li { 
         display: inline-block;
         a {
@@ -37,6 +36,15 @@
           border: 2px solid $primary-color;
           padding: 10px;
         }
+      }
+    }
+    .toggle-menu-open {
+      display: none;
+    } 
+    .toggle-menu-close {
+      display: none;
+      @include media-query(600px) {
+        display: block;
       }
     }
   } 
@@ -58,32 +66,39 @@
     position: absolute;
     left: 0;
     right:0;
-    // background: rgba(134, 134, 134, 0.2);
     height: 100vh;
   }
-  .banner-wrapper {
+  .banner-content {
     z-index: 3;
     text-align: left;
-    margin: 150px;
+    margin: 160px 0 0 10px;
     padding: 50px;
-    //background:rgba(255,255,255,.8);
     h1 {
       color:#fff;
       text-transform: uppercase;
       letter-spacing: -5px;
-      margin-top: -40px;
+      margin-top: -30px;
+
       font: {
         size: 6rem;
         weight: 800;
       }
+      @include media-query ($md-screen) {
+        font-size: 4.5rem;
+      } 
+      @include media-query ($sm-screen) {
+        font-size: 3.5rem;
+      } 
     }
     h2 {
       color:#fff;
       margin-top: -10px;
       margin-bottom: 30px;
-      word-spacing: 5px;
-      font-size: 3rem;
-      text-transform: lowercase;
+      font-size: 1.5rem;
+      font-family: $secondary-font;
+      @include media-query ($sm-screen) {
+        font-size: 1.3rem;
+      } 
     }
     a {
       padding: 10px 25px;
@@ -92,7 +107,135 @@
       text-transform: uppercase;
       letter-spacing: 1.6px;
     }
+  } 
+} 
+
+
+//Ammenities
+#amenities {
+  background: url(/dist/images/rooms-left.png) no-repeat left center,
+              url(/dist/images/rooms-right.png) no-repeat right center,
+              linear-gradient(#99d880, #9adfb6, #6ee2e2);
+  background-size: 1600px 100%;
+  @include media-query (1500px) {
+    background-size: 900px 100%;
+  }
+  @include media-query (1200px) {
+    background-size: 0% ;
+  }
+
+}
+
+.detail-wrapper {
+  h3 {
+    font-size: 2.5rem;
+    color: $primary-color;
+    span {
+      font-size: 1rem
+    }
+  }
+  
+  ul li {
+    color: $dark-color;
+    font-size: 1.3rem;
+  }
+
+  a {
+    color: $dark-color;
+    padding: 10px 15px;
+    border: 2px solid $primary-color;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1.3rem;
   }
 }
 
+
+//galleru
+.gallery-box {
+  position: relative;
+  overflow: hidden;
+  background: $primary-color;
+  margin-bottom: 20px;
+  img {
+    transition: .5s ease;
+  }
+  .gallery-link {
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    background: rgba(240, 113, 0, .9);
+    transition: .5s ease;
+    color: #fff;
+    min-height: 50%;
+    width: 100%;
+    h3 {
+      font-size: 1.4rem;
+    }
+    a {
+      display: inline-block;
+      padding: 10px 15px;
+      border: 1px solid #fff;
+      color: #fff;
+    }
+  }
+  &:hover .gallery-link {
+    bottom:0;
+  }
+  &:hover img {
+    transform: translateY(-10px)scale(1.1);
+    opacity: 0.7;
+  }
+}
+
+//contact 
+#contact {
+  position: relative;
+  background:url(/dist/images/contact.png);
+  background: {
+      attachment: fixed;
+      size: cover;
+      repeat:no-repeat;
+      position: center -20px;
+  }
   
+}
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-content {
+  width: 50%;
+  @include media-query(800px) {
+    width: 90%;
+  }
+  form {
+
+      input, textarea {
+          display: block;
+          width: 100%;
+          margin-bottom:10px;
+          padding: 10px 5px;
+          border: 1px solid #fff;
+          outline: none;
+          background-color: transparent;
+          color:#fff;
+      }
+      input::placeholder,
+      textarea::placeholder{ color: #fff }
+      textarea {
+          height: 200px;
+      }
+      button {
+          background: transparent;
+          padding: 10px 16px;
+          border: 1px solid #fff;
+          text-transform: uppercase;
+          letter-spacing: 1.6px;
+          color:#fff;
+      }
+  }
+}
