@@ -697,31 +697,61 @@ p {
 
 @media screen and (max-width: 800px) {
   .toggle-menu-open {
-    display: block !important;
+    display: block;
     position: relative;
     top: 40px;
     text-align: right;
-    margin-right: 40px; }
+    margin-right: 40px;
+    cursor: pointer; }
+  #open {
+    display: block; }
   .toggle-menu-close {
     display: block;
+    margin-right: 40px;
+    font-size: 2rem;
     text-align: right;
-    padding: 20px; }
-  nav {
+    padding: 20px;
+    color: #fff;
+    cursor: pointer; }
+  .toggle-menu-open {
+    display: none;
     position: relative;
-    right: 100%;
-    background-color: rgba(0, 0, 0, 0.336);
-    width: 50vw;
+    top: 15px; }
+    .toggle-menu-open i {
+      font-size: 2rem;
+      color: #fff; }
+  nav {
+    position: absolute;
+    left: 100%;
+    margin-top: -35px;
+    background-color: #727272;
+    width: 100vw;
     height: 100vh;
-    margin-right: 0 !important; }
+    margin-right: 0 !important;
+    transition: .5s ease; }
     nav ul li {
       display: block !important;
-      text-align: right; } }
+      text-align: right;
+      margin-right: 30px;
+      transition: .3s ease; } }
+
+nav.active {
+  left: 0; }
+
+nav.active .toggle-menu-close {
+  display: block; }
+
+@media screen and (min-width: 800px) {
+  #open {
+    display: none; } }
 
 header {
   position: fixed;
   z-index: 5;
   width: 100%;
-  height: 100px; }
+  height: 100px;
+  background: #727272;
+  transition: 1s ease; }
   header:before, header:after {
     content: "";
     display: table; }
@@ -731,12 +761,20 @@ header {
     padding: .5rem;
     float: left;
     margin-left: 1rem; }
+    header #branding img {
+      transition: 1s ease;
+      width: 100%; }
   header nav {
     float: right;
     margin-right: 1rem;
-    line-height: 100px; }
+    line-height: 100px;
+    transition: 1s ease; }
+    @media screen and (max-width: 800px) {
+      header nav {
+        line-height: 60px; } }
     header nav ul li {
-      display: inline-block; }
+      display: inline-block;
+      transition: .5s ease; }
       header nav ul li a {
         text-decoration: none;
         text-transform: uppercase;
@@ -744,17 +782,27 @@ header {
         margin-right: 20px;
         font-size: 1.2rem;
         letter-spacing: 1.6px; }
-      header nav ul li .active {
-        color: #f07100;
-        border: 2px solid #f07100;
-        padding: 10px; }
-  header .toggle-menu-open {
-    display: none; }
+  header nav ul li.active a {
+    color: #f07100;
+    border: 2px solid #f07100;
+    padding: 10px; }
   header .toggle-menu-close {
     display: none; }
     @media screen and (max-width: 600px) {
       header .toggle-menu-close {
         display: block; } }
+
+.onTop {
+  background: transparent; }
+
+header.shrink {
+  height: 60px; }
+
+header.shrink nav {
+  line-height: 60px; }
+
+header.shrink img {
+  width: 55% !important; }
 
 #banner {
   background: url("../images/banner.jpg");
@@ -806,8 +854,11 @@ header {
       text-transform: uppercase;
       letter-spacing: 1.6px; }
 
+#rate {
+  background: linear-gradient(45deg, rgba(255, 251, 214, 0.487), rgba(255, 253, 237, 0.748)), url(/dist/images/full-bloom.png); }
+
 #amenities {
-  background: url(/dist/images/rooms-left.png) no-repeat left center, url(/dist/images/rooms-right.png) no-repeat right center, linear-gradient(#99d880, #9adfb6, #6ee2e2);
+  background-color: #eeeeee;
   background-size: 1600px 100%; }
   @media screen and (max-width: 1500px) {
     #amenities {
@@ -834,10 +885,13 @@ header {
   margin-top: 10px;
   font-size: 1.3rem; }
 
+#gallery {
+  background: url(/dist/images/full-bloom.png); }
+
 .gallery-box {
   position: relative;
   overflow: hidden;
-  background: #f07100;
+  background: black;
   margin-bottom: 20px; }
   .gallery-box img {
     transition: .5s ease; }
@@ -862,15 +916,14 @@ header {
     bottom: 0; }
   .gallery-box:hover img {
     transform: translateY(-10px) scale(1.1);
-    opacity: 0.7; }
+    opacity: 0.5; }
 
 #contact {
   position: relative;
-  background: url(/dist/images/contact.png);
-  background-attachment: fixed;
-  background-size: cover;
+  background: linear-gradient(0deg, rgba(56, 129, 58, 0.5), rgba(89, 114, 177, 0.5)), url(/dist/images/footer.png);
   background-repeat: no-repeat;
-  background-position: center -20px; }
+  background-size: cover;
+  background-position: center center; }
 
 .contact-wrapper {
   display: flex;
@@ -878,24 +931,30 @@ header {
   align-items: center; }
 
 .contact-content {
-  width: 50%; }
+  width: 70%; }
   @media screen and (max-width: 800px) {
     .contact-content {
-      width: 90%; } }
+      width: 95%; } }
   .contact-content form input, .contact-content form textarea {
     display: block;
     width: 100%;
     margin-bottom: 10px;
     padding: 10px 5px;
-    border: 1px solid #fff;
     outline: none;
-    background-color: transparent;
-    color: #fff; }
+    color: #fff;
+    background: transparent;
+    border: 1px solid #fff; }
   .contact-content form input::placeholder,
   .contact-content form textarea::placeholder {
-    color: #fff; }
+    color: #fff;
+    font-family: "Raleway", sans-serif; }
   .contact-content form textarea {
-    height: 200px; }
+    height: 120px; }
+  .contact-content form .checkin {
+    display: flex;
+    justify-content: space-between; }
+    .contact-content form .checkin input {
+      width: 49%; }
   .contact-content form button {
     background: transparent;
     padding: 10px 16px;
@@ -903,3 +962,26 @@ header {
     text-transform: uppercase;
     letter-spacing: 1.6px;
     color: #fff; }
+
+footer {
+  background: #eaeaea;
+  color: #000; }
+  footer .footer-wrapper {
+    padding: 20px; }
+    footer .footer-wrapper img {
+      width: 50%; }
+    footer .footer-wrapper h3 {
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      color: #000; }
+    footer .footer-wrapper ul li {
+      margin-right: 20px;
+      display: inline-block; }
+      footer .footer-wrapper ul li:hover {
+        color: #fff; }
+    footer .footer-wrapper i {
+      font-size: 1.5rem; }
+    footer .footer-wrapper a {
+      color: #000; }
+      footer .footer-wrapper a:hover {
+        color: #fff; }

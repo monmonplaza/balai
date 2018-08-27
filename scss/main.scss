@@ -12,17 +12,31 @@
     z-index: 5;
     width: 100%;
     height: 100px ;
+    background:rgba(114, 114, 114,1);
+    transition: 1s ease;
+    
     #branding {
       padding: .5rem;
       float: left;
       margin-left: 1rem;
+      img {
+        transition: 1s ease;
+        width: 100%
+      }
+
     }
     nav {
       float: right;
       margin-right: 1rem;
       line-height: 100px;
+      transition: 1s ease;
+      @include media-query($md-screen) {
+        line-height: 60px;
+      }
       ul li { 
         display: inline-block;
+        transition: .5s ease;
+    
         a {
           text-decoration: none;
           text-transform: uppercase;  
@@ -31,23 +45,40 @@
           font-size: 1.2rem;
           letter-spacing: 1.6px;
         }  
-        .active {
-          color: $primary-color;
-          border: 2px solid $primary-color;
-          padding: 10px;
-        }
       }
+    }   
+
+
+    nav ul li.active a {
+      color: $primary-color;
+      border: 2px solid $primary-color;
+      padding: 10px;
+
     }
-    .toggle-menu-open {
-      display: none;
-    } 
+
     .toggle-menu-close {
       display: none;
       @include media-query(600px) {
         display: block;
       }
     }
-  } 
+  }
+
+  .onTop{
+    background: transparent;
+  }
+
+  header.shrink {
+    height: 60px;
+  }
+
+  header.shrink nav {
+    line-height: 60px;
+  }
+
+  header.shrink img {
+    width: 55%!important;
+  }
   
 #banner {
   background: url($banner-img);
@@ -75,7 +106,7 @@
     padding: 50px;
     h1 {
       color:#fff;
-      text-transform: uppercase;
+      text-transform: uppercase;   
       letter-spacing: -5px;
       margin-top: -30px;
 
@@ -109,13 +140,13 @@
     }
   } 
 } 
-
+#rate {
+  background: linear-gradient(45deg,rgba(255, 251, 214, 0.487),rgba(255, 253, 237, 0.748)), url(/dist/images/full-bloom.png);
+}
 
 //Ammenities
 #amenities {
-  background: url(/dist/images/rooms-left.png) no-repeat left center,
-              url(/dist/images/rooms-right.png) no-repeat right center,
-              linear-gradient(#99d880, #9adfb6, #6ee2e2);
+  background-color: #eeeeee; 
   background-size: 1600px 100%;
   @include media-query (1500px) {
     background-size: 900px 100%;
@@ -125,7 +156,7 @@
   }
 
 }
-
+   
 .detail-wrapper {
   h3 {
     font-size: 2.5rem;
@@ -150,12 +181,15 @@
   }
 }
 
+#gallery {
+  background: url(/dist/images/full-bloom.png);
+}
 
-//galleru
+//gallery
 .gallery-box {
   position: relative;
   overflow: hidden;
-  background: $primary-color;
+  background: rgb(0, 0, 0);
   margin-bottom: 20px;
   img {
     transition: .5s ease;
@@ -185,49 +219,56 @@
   }
   &:hover img {
     transform: translateY(-10px)scale(1.1);
-    opacity: 0.7;
+    opacity: 0.5;
   }
 }
 
 //contact 
 #contact {
   position: relative;
-  background:url(/dist/images/contact.png);
-  background: {
-      attachment: fixed;
-      size: cover;
-      repeat:no-repeat;
-      position: center -20px;
-  }
-  
+  background:   linear-gradient(0deg,rgba(56, 129, 58, 0.5), rgba(89, 114, 177, 0.5)),
+  url(/dist/images/footer.png);
+
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position: center center;   
 }
+
 .contact-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: center; 
   align-items: center;
-}
-
+}  
+ 
 .contact-content {
-  width: 50%;
-  @include media-query(800px) {
-    width: 90%;
+  width: 70%;
+  @include media-query($md-screen){
+    width: 95%;
   }
-  form {
-
+  form { 
       input, textarea {
           display: block;
           width: 100%;
           margin-bottom:10px;
           padding: 10px 5px;
-          border: 1px solid #fff;
           outline: none;
-          background-color: transparent;
           color:#fff;
+          background:transparent;
+          border: 1px solid #fff;
+
       }
       input::placeholder,
-      textarea::placeholder{ color: #fff }
+      textarea::placeholder{ color: #fff; font-family: $main-font }
       textarea {
-          height: 200px;
+          height: 120px;
+      }
+    
+      .checkin {
+        display: flex;
+        justify-content: space-between;
+        input {
+          width: 49%;
+        }
       }
       button {
           background: transparent;
@@ -236,6 +277,41 @@
           text-transform: uppercase;
           letter-spacing: 1.6px;
           color:#fff;
-      }
+    }
   }
+
 }
+
+footer {
+  background: #eaeaea;
+  color: #000;
+  .footer-wrapper {
+    padding: 20px;
+
+    img {
+      width: 50%;
+    }
+    h3 {
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      color:  #000;
+    }
+    ul li {
+      margin-right: 20px;
+      display: inline-block;
+      &:hover {
+        color: #fff;
+      }
+    }
+    i {
+      font-size: 1.5rem;
+    }
+    a {
+      color: #000;
+      &:hover {
+        color: #fff;
+      }
+    }  
+    
+  }
+}     

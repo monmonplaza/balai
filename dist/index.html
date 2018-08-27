@@ -16,24 +16,29 @@
         <div id="branding">
             <img src="images/logo-orange.png" alt="Balai Logo">
         </div>
-        <div class="toggle-menu-open">menu</div>
+        <div class="toggle-menu-open" id="open">
+            <i class="fa fa-bars"></i>
+        </div>
         <nav>
-            <div class="toggle-menu-close">x</div>
+            <div class="toggle-menu-close" id="close">
+                <i class="fa fa-arrow-left"></i>
+            </div>
             <ul>
                 <li>
-                    <a href="#" class="active">Home</a>
+                    <a href="#banner" class="nav-item">Home</a>
                 </li>
                 <li>
-                    <a href="#">About</a>
+                    <a href="#about" class="nav-item">About</a>
                 </li>
                 <li>
-                    <a href="#">Amenities</a>
+                    <a href="#rate" class="nav-item">Rates</a>
                 </li>
                 <li>
-                    <a href="#">Rates</a>
+                    <a href="#gallery" class="nav-item">Gallery</a>
                 </li>
+
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="#contact" class="nav-item">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -86,7 +91,7 @@
     </section>
     <!-- about end -->
 
-    <section id="amenities">
+    <section id="rate">
         <div class="container">
             <div class="wrapper">
                 <div class="section-title text-left">
@@ -261,53 +266,81 @@
                     <h4>Connect</h4>
                 </div>
 
+
                 <div class="contact-wrapper">
                     <div class="contact-content">
                         <form action="">
                             <input type="text" placeholder="Name">
                             <input type="number" placeholder="Phone">
-                            <input type="email" placeholder="Email">
+                            <input types="email" placeholder="Email">
+                            <div class="checkin">
+                                <input type="date" placeholder="Check-In">
+                                <input type="date" placeholder="Check-Out">
+                            </div>
                             <textarea name="" id="" placeholder="Message"></textarea>
                             <button>Submit</button>
                         </form>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <footer>
         <div class="container">
             <div class="wrapper">
-                <div class="footer-content">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-youtube"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-instagram"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <h3>Balai Inn Travel Lodge</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="footer-wrapper">
+                            <img src="./images/logo-bck.png" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis minima numquam cum, dolorum
+                                quos illo itaque exercitationem deleniti? Inventore, totam.</p>
+                        </div>
+                    </div>
 
+                    <div class="col-md-8">
+                        <div class="footer-wrapper">
+                            <h3>Connect with Us</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+
+                                    <p>
+                                        <i class="fa fa-map-marker"></i> Agos Polangui, Albay, Philippines 4506</p>
+                                    <p>
+                                        <i class="fa fa-phone"></i> 0915 110 1112</p>
+                                    <p>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <i class="fa fa-envelope"></i> info@balaiinn.com.ph</p>
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-facebook-square"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-google-plus"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

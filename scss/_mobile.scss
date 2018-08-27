@@ -1,31 +1,69 @@
 @media screen and (max-width: $md-screen) {
     .toggle-menu-open {
-        display: block!important;
+        display: block;
         position: relative;
         top: 40px;
         text-align: right;
         margin-right: 40px;
+        cursor: pointer;
+    }
 
+    #open {
+        display: block;
     }
     
     .toggle-menu-close {
         display: block;
+        margin-right: 40px;
+        font-size: 2rem;
         text-align: right;
         padding: 20px;
+        color: #fff;
+        cursor: pointer;
     }
+
+    .toggle-menu-open {
+        display: none;
+        position: relative;
+        top: 15px;
+        i {
+          font-size: 2rem;
+          color: #fff;
+        }
+      } 
      
     nav {
-        position: relative;
-        right: 100%;
-        background-color: rgba(0, 0, 0, 0.336);
-        width: 50vw;
+        position: absolute;
+        left: 100%;
+        margin-top: -35px;
+        background-color: #727272;
+        width: 100vw;
         height: 100vh;
         margin-right: 0!important;
+        transition: .5s ease;
         ul {
             li {
                 display: block!important;
                 text-align: right;
+                margin-right: 30px;
+                transition: .3s ease;
             }
         }
     }
 }  
+
+nav.active {
+    left:0;
+}
+
+nav.active .toggle-menu-close {
+    display: block;
+}
+
+
+
+@media screen and (min-width: $md-screen) {
+    #open {
+        display: none;
+    }
+}
