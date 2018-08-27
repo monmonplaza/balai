@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none; }
+
+body {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.3; }
+
+p {
+  padding-bottom: 15px; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+.wrapper {
+  padding: 100px 0; }
+
+.img-fluid {
+  width: 100%;
+  height: auto; }
